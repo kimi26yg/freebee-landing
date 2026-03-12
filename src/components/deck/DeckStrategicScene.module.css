@@ -1,0 +1,1055 @@
+.scene {
+  position: relative;
+  display: grid;
+  align-items: center;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  padding: 1rem 1.2rem 0.4rem;
+}
+
+.stateFlowScene,
+.webJourneyScene,
+.checkinScene,
+.performanceScene {
+  width: min(100%, 60rem);
+  margin: 0 auto;
+}
+
+.stateFlowScene {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-content: center;
+}
+
+.stateFlowStage {
+  position: relative;
+  min-height: 12rem;
+  padding: 1.25rem 1.1rem;
+  border: 1px solid rgba(239, 217, 162, 0.92);
+  border-radius: 24px;
+  background: rgba(255, 252, 247, 0.78);
+}
+
+.stateFlowStage > span,
+.webJourneyPhase > span,
+.contractSyncCard > span,
+.checkinPoint > span,
+.webAiStep > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  min-height: 3rem;
+  border-radius: 16px;
+  background: rgba(243, 199, 66, 0.18);
+  color: #8b5f1b;
+  font-weight: 900;
+}
+
+.stateFlowStage strong,
+.webJourneyPhase strong,
+.contractSyncCard strong,
+.checkinPoint strong,
+.webAiStep h3,
+.stateFlowFooter h3,
+.webJourneySummary h3,
+.checkinSummary h3,
+.performanceGrid h3 {
+  display: block;
+  margin: 0.8rem 0 0.35rem;
+  color: #25190d;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.stateFlowStage p,
+.webJourneyPhase p,
+.contractSyncCard p,
+.checkinPoint p,
+.webAiStep p,
+.stateFlowFooter p,
+.webJourneySummary p,
+.checkinSummary p,
+.mlkitResults p,
+.gpsAlerts p,
+.performanceMetrics p,
+.performanceGrid p {
+  margin: 0;
+  color: rgba(61, 42, 20, 0.8);
+  line-height: 1.48;
+}
+
+.stateFlowArrow {
+  position: absolute;
+  top: 50%;
+  right: -0.95rem;
+  transform: translateY(-50%);
+  color: #c58a27;
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.stateFlowFooter,
+.webJourneySummary,
+.checkinSummary,
+.performanceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  grid-column: 1 / -1;
+  margin-top: 0.35rem;
+}
+
+.stateFlowFooter section,
+.webJourneySummary section,
+.checkinSummary section,
+.performanceGrid section {
+  padding: 1rem 1rem 1.05rem;
+  border-radius: 22px;
+  background: rgba(255, 249, 239, 0.72);
+  border: 1px solid rgba(239, 217, 162, 0.7);
+}
+
+.webAiScene {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.8fr) minmax(24rem, 1.2fr);
+  gap: 1.2rem;
+  width: min(100%, 62rem);
+  margin: 0 auto;
+}
+
+.webAiRail {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.webAiStep {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  gap: 0.8rem;
+  padding: 1rem;
+  border-radius: 22px;
+  border: 1px solid rgba(52, 101, 164, 0.16);
+  background: rgba(248, 251, 255, 0.84);
+}
+
+.webAiPanel {
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+  min-height: 100%;
+  padding: 1.45rem;
+  border-radius: 28px;
+  background: rgba(248, 251, 255, 0.72);
+  border: 1px solid rgba(52, 101, 164, 0.18);
+}
+
+.webAiPanel p,
+.appOverviewCore p,
+.mlkitEngine p {
+  margin: 0;
+  color: #5576ad;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.webAiPanel > strong,
+.appOverviewCore > strong,
+.mlkitEngine > strong {
+  color: #21385f;
+  font-size: 1.55rem;
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+}
+
+.webAiMetrics,
+.mlkitResults,
+.gpsAlerts,
+.performanceMetrics {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.webAiMetrics {
+  grid-template-columns: 1fr;
+}
+
+.webAiMetrics article,
+.mlkitResults article,
+.gpsAlerts article,
+.performanceMetrics article {
+  padding: 1rem;
+  border-radius: 20px;
+  background: rgba(255, 252, 247, 0.86);
+  border: 1px solid rgba(52, 101, 164, 0.14);
+}
+
+.webAiMetrics span,
+.mlkitResults span,
+.gpsAlerts span,
+.performanceMetrics span,
+.appOverviewNode span {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #5576ad;
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.webAiMetrics strong,
+.mlkitResults strong,
+.gpsAlerts strong,
+.performanceMetrics strong,
+.appOverviewNode strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #1f2f4f;
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+.webJourneyScene {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.webJourneyPhase {
+  position: relative;
+  min-height: 11rem;
+  padding: 1.15rem;
+  border-radius: 24px;
+  background: rgba(244, 252, 247, 0.82);
+  border: 1px solid rgba(33, 135, 93, 0.14);
+}
+
+.webJourneyPhase i,
+.contractSyncCard i {
+  position: absolute;
+  top: 50%;
+  right: -0.9rem;
+  transform: translateY(-50%);
+  color: #1c7d58;
+  font-style: normal;
+  font-size: 1.45rem;
+  font-weight: 900;
+}
+
+.appOverviewScene {
+  width: min(100%, 60rem);
+  min-height: 26rem;
+  margin: 0 auto;
+}
+
+.appOverviewCore {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16rem;
+  min-height: 11rem;
+  display: grid;
+  place-content: center;
+  gap: 0.85rem;
+  padding: 1.4rem;
+  text-align: center;
+  border-radius: 28px;
+  background: rgba(255, 250, 240, 0.86);
+  border: 1px solid rgba(239, 217, 162, 0.9);
+}
+
+.appOverviewNode {
+  position: absolute;
+  width: 14rem;
+  padding: 1rem 1rem 1.05rem;
+  border-radius: 22px;
+  border: 1px solid rgba(239, 217, 162, 0.72);
+  background: rgba(255, 252, 247, 0.84);
+}
+
+.appOverviewNode1 {
+  top: 2rem;
+  left: 7rem;
+}
+
+.appOverviewNode2 {
+  top: 2rem;
+  right: 7rem;
+}
+
+.appOverviewNode3 {
+  bottom: 2rem;
+  left: 7rem;
+}
+
+.appOverviewNode4 {
+  bottom: 2rem;
+  right: 7rem;
+}
+
+.contractSyncScene {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  width: min(100%, 58rem);
+  margin: 0 auto;
+  align-items: center;
+}
+
+.contractSyncCard {
+  position: relative;
+  min-height: 13rem;
+  padding: 1.25rem 1.15rem;
+  border-radius: 24px;
+  border: 1px solid rgba(52, 101, 164, 0.16);
+  background: rgba(248, 251, 255, 0.84);
+  box-shadow: 0 12px 26px rgba(52, 101, 164, 0.08);
+}
+
+.checkinScene {
+  display: grid;
+  gap: 1rem;
+}
+
+.checkinTrack {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.checkinPoint {
+  min-height: 11rem;
+  padding: 1.1rem;
+  border-radius: 24px;
+  border: 1px solid rgba(33, 135, 93, 0.14);
+  background: rgba(244, 252, 247, 0.84);
+}
+
+.mlkitScene {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.8fr) minmax(18rem, 0.9fr) minmax(16rem, 1fr);
+  gap: 1rem;
+  align-items: center;
+  width: min(100%, 60rem);
+  margin: 0 auto;
+}
+
+.mlkitSources {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.mlkitSources span {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+  border: 1px dashed rgba(52, 101, 164, 0.34);
+  color: #415b8c;
+  font-weight: 700;
+  background: rgba(248, 251, 255, 0.72);
+}
+
+.mlkitEngine {
+  display: grid;
+  place-content: center;
+  gap: 0.8rem;
+  min-height: 14rem;
+  padding: 1.25rem;
+  border-radius: 50%;
+  text-align: center;
+  background: rgba(226, 238, 255, 0.74);
+  border: 1px solid rgba(52, 101, 164, 0.22);
+}
+
+.gpsScene {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.9fr) minmax(18rem, 1fr);
+  gap: 1.4rem;
+  align-items: center;
+  width: min(100%, 58rem);
+  margin: 0 auto;
+}
+
+.gpsRadar {
+  position: relative;
+  min-height: 20rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(33, 135, 93, 0.18) 0 4rem, transparent 4rem 7rem, rgba(33, 135, 93, 0.12) 7rem 7.2rem, transparent 7.2rem 10rem, rgba(33, 135, 93, 0.08) 10rem 10.2rem, transparent 10.2rem);
+}
+
+.gpsPulse {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: rgba(33, 135, 93, 0.18);
+  box-shadow: 0 0 0 1.5rem rgba(33, 135, 93, 0.08);
+}
+
+.gpsRadar strong {
+  position: absolute;
+  color: #1c7d58;
+  font-size: 2rem;
+  letter-spacing: -0.06em;
+}
+
+.performanceScene {
+  display: grid;
+  gap: 1rem;
+  width: min(100%, 64rem);
+  margin: 0 auto;
+  align-content: center;
+}
+
+.performanceMetrics {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.performanceMetrics article {
+  min-height: 8rem;
+  padding: 1.15rem 1.1rem;
+}
+
+.performanceMetrics strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #2c406b;
+  font-size: 2.5rem;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.performanceGrid section {
+  min-height: 6.4rem;
+}
+
+.appSummaryScene {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+  gap: 2.4rem;
+  width: min(100%, 62rem);
+  margin: 0 auto;
+  align-items: center;
+}
+
+.appPath {
+  display: grid;
+  gap: 1rem;
+  padding: 1.35rem 1.25rem 1.2rem 3.4rem;
+  border: 1px solid rgba(239, 217, 162, 0.82);
+  border-radius: 28px;
+  background: rgba(255, 252, 247, 0.72);
+}
+
+.appPath::before {
+  content: "";
+  position: absolute;
+  top: 1.8rem;
+  left: 1.6rem;
+  bottom: 2.1rem;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(243, 199, 66, 0.9), rgba(243, 199, 66, 0.12));
+}
+
+.appStep {
+  display: grid;
+  grid-template-columns: 3.25rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.appStep > span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 18px;
+  background: #f3c742;
+  color: #4a2f0f;
+  font-weight: 900;
+}
+
+.appStep strong,
+.marketNotes h3,
+.compareLane h3,
+.briefingItem h3 {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #281a0d;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.appStep p,
+.marketNotes p,
+.briefingItem p,
+.compareBlock p,
+.closingWords p,
+.competitionResolve b,
+.competitionChaos span,
+.expansionNode p,
+.pricingTier p {
+  margin: 0;
+  color: rgba(61, 42, 20, 0.82);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.appManifest {
+  align-self: center;
+  padding: 1.5rem 1.4rem;
+  border: 1px solid rgba(239, 217, 162, 0.82);
+  border-radius: 28px;
+  border-top: 2px solid rgba(243, 199, 66, 0.8);
+  background: rgba(255, 249, 239, 0.78);
+}
+
+.appManifest p,
+.briefingHeader p,
+.competitionChaos p,
+.competitionResolve p {
+  margin: 0 0 0.45rem;
+  color: #a16d1c;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.appManifest strong,
+.briefingHeader strong,
+.competitionResolve strong {
+  display: block;
+  color: #22160a;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.appManifest h3 {
+  margin: 0.9rem 0 0;
+  color: #624319;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.impactScene {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(18rem, 1fr));
+  gap: 1.15rem;
+  width: min(100%, 58rem);
+  margin: 0 auto;
+}
+
+.impactPoster {
+  min-height: 10rem;
+  padding: 1.35rem 1.4rem;
+  border: 1px solid rgba(239, 217, 162, 0.9);
+  background: rgba(255, 252, 247, 0.75);
+}
+
+.impactPoster span {
+  display: block;
+  color: #9c6a20;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.impactPoster strong {
+  display: block;
+  margin: 0.5rem 0 0.55rem;
+  color: #25190d;
+  font-size: clamp(2.6rem, 4.8vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+}
+
+.impactPoster p {
+  margin: 0;
+  max-width: 16rem;
+  color: #5e4628;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.impactPoster1 {
+  border-radius: 30px 30px 8px 30px;
+}
+
+.impactPoster2 {
+  border-radius: 8px 30px 30px 30px;
+}
+
+.impactPoster3 {
+  border-radius: 30px 8px 30px 30px;
+}
+
+.impactPoster4 {
+  border-radius: 30px;
+}
+
+.marketScene {
+  display: grid;
+  grid-template-columns: minmax(20rem, 24rem) minmax(20rem, 1fr);
+  gap: 2.25rem;
+  align-items: center;
+  width: min(100%, 60rem);
+  margin: 0 auto;
+}
+
+.marketOrbit {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 24rem;
+}
+
+.marketRingOuter,
+.marketRingMid,
+.marketRingInner {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  text-align: center;
+}
+
+.marketRingOuter {
+  width: 20rem;
+  height: 20rem;
+  border: 1px solid rgba(33, 135, 93, 0.2);
+  background: rgba(232, 248, 239, 0.45);
+}
+
+.marketRingMid {
+  width: 13.5rem;
+  height: 13.5rem;
+  border: 1px solid rgba(33, 135, 93, 0.28);
+  background: rgba(219, 243, 232, 0.66);
+}
+
+.marketRingInner {
+  width: 7.8rem;
+  height: 7.8rem;
+  background: #1f7d58;
+  color: #f5fff9;
+}
+
+.marketOrbit strong {
+  display: block;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.marketOrbit span {
+  display: block;
+  max-width: 8rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+.marketNotes {
+  display: grid;
+  gap: 1.15rem;
+  width: min(100%, 27rem);
+}
+
+.marketNotes section {
+  padding-left: 1.15rem;
+  border-left: 2px solid rgba(33, 135, 93, 0.28);
+}
+
+.competitionScene {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  width: min(100%, 60rem);
+  margin: 0 auto;
+}
+
+.competitionPanel {
+  display: grid;
+  align-content: start;
+  gap: 0.9rem;
+  min-height: 18rem;
+  padding: 1.25rem 1.15rem;
+  border: 1px solid rgba(121, 98, 66, 0.12);
+  border-radius: 24px;
+  background: rgba(255, 252, 247, 0.72);
+}
+
+.competitionPanelCenter {
+  background: rgba(250, 247, 240, 0.9);
+}
+
+.competitionPanelResolve {
+  background: rgba(248, 246, 241, 0.95);
+}
+
+.competitionChaos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.competitionChaos span {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.78rem 1rem;
+  border: 1px dashed rgba(121, 98, 66, 0.55);
+  border-radius: 999px;
+  background: rgba(255, 251, 246, 0.7);
+}
+
+.competitionChaos span:nth-child(3) {
+  transform: translateX(1.6rem);
+}
+
+.competitionChaos span:nth-child(4) {
+  transform: translateX(0.45rem);
+}
+
+.competitionChaos span:nth-child(5) {
+  transform: translateX(2.25rem);
+}
+
+.competitionNotes {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.competitionNotes em {
+  padding-left: 0.9rem;
+  border-left: 2px solid rgba(121, 98, 66, 0.18);
+  color: rgba(61, 42, 20, 0.72);
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.competitionResolve {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 0.6rem;
+}
+
+.competitionResolve b {
+  display: inline-flex;
+  padding: 0.75rem 0.95rem;
+  border-radius: 16px;
+  background: rgba(37, 27, 16, 0.08);
+}
+
+.beforeAfterScene {
+  display: grid;
+  gap: 1rem;
+  width: min(100%, 58rem);
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.compareLane {
+  display: grid;
+  grid-template-columns: 1.3fr auto 1.3fr;
+  gap: 0.9rem;
+  align-items: center;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(239, 217, 162, 0.8);
+}
+
+.compareLane:last-child {
+  border-bottom: 0;
+}
+
+.compareBlock {
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  background: rgba(92, 68, 34, 0.08);
+}
+
+.compareBlockAfter {
+  background: rgba(243, 199, 66, 0.14);
+}
+
+.compareBlock span {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #9a6820;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.compareArrow {
+  color: #c58a27;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.expansionScene {
+  min-height: 100%;
+  width: min(100%, 60rem);
+  margin: 0 auto;
+}
+
+.expansionHub {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9.5rem;
+  height: 9.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #2d4f8d;
+  color: #f5f9ff;
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.expansionNode {
+  position: absolute;
+  width: 14rem;
+  padding: 1rem 1.05rem;
+  border: 1px solid rgba(52, 101, 164, 0.2);
+  border-radius: 22px;
+  background: rgba(248, 251, 255, 0.8);
+  box-shadow: 0 12px 30px rgba(39, 67, 110, 0.08);
+}
+
+.expansionNode span,
+.pricingTier span,
+.closingWords span {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #5576ad;
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.expansionNode strong,
+.pricingTier strong,
+.closingWords strong {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #1f2f4f;
+  font-size: 1.35rem;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.expansionNode1 {
+  top: 3.5rem;
+  left: 6rem;
+}
+
+.expansionNode2 {
+  top: 3.5rem;
+  right: 6rem;
+}
+
+.expansionNode3 {
+  bottom: 3rem;
+  left: 6.5rem;
+}
+
+.expansionNode4 {
+  bottom: 3rem;
+  right: 6.5rem;
+}
+
+.briefingScene {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1.25rem;
+  width: min(100%, 56rem);
+  margin: 0 auto;
+}
+
+.briefingFeed {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.briefingHeader {
+  width: min(100%, 44rem);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.briefingItem {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: 0.9rem;
+  min-height: 7.2rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(33, 135, 93, 0.16);
+  border-left: 4px solid rgba(33, 135, 93, 0.4);
+  border-radius: 22px;
+  background: rgba(244, 252, 247, 0.76);
+}
+
+.briefingItem > span {
+  display: inline-flex;
+  align-items: flex-start;
+  color: #1c7d58;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.pricingScene {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 27rem;
+  width: min(100%, 62rem);
+  margin: 0 auto;
+  justify-content: center;
+  padding: 1.5rem 0 2rem;
+}
+
+.pricingScene::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(40, 28, 18, 0.12), transparent);
+}
+
+.pricingTier {
+  flex: 1;
+  display: grid;
+  align-content: end;
+  padding: 1.1rem 1rem 1.2rem;
+  border: 1px solid rgba(40, 28, 18, 0.1);
+  border-radius: 22px 22px 8px 8px;
+  background: linear-gradient(180deg, rgba(255, 250, 242, 0.92), rgba(37, 27, 16, 0.12));
+  box-shadow: 0 14px 28px rgba(37, 27, 16, 0.08);
+}
+
+.pricingTier1 {
+  min-height: 42%;
+}
+
+.pricingTier2 {
+  min-height: 60%;
+}
+
+.pricingTier3 {
+  min-height: 82%;
+}
+
+.pricingTier4 {
+  min-height: 54%;
+}
+
+.closingScene {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1.15rem;
+  align-content: center;
+  width: min(100%, 60rem);
+  margin: 0 auto;
+}
+
+.closingEyebrow {
+  margin: 0;
+  text-align: center;
+  color: #a16d1c;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.closingScene blockquote {
+  margin: 0 auto;
+  max-width: 50rem;
+  color: #24180d;
+  font-size: clamp(1.55rem, 2.5vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: -0.05em;
+  text-align: center;
+}
+
+.closingWords {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+.closingWords article {
+  padding: 1rem 1rem 1.1rem;
+  border: 1px solid rgba(42, 32, 19, 0.08);
+  border-radius: 20px;
+  background: rgba(255, 251, 245, 0.82);
+}
+
+@media (max-width: 1100px) {
+  .impactScene,
+  .marketScene,
+  .competitionScene,
+  .closingWords {
+    grid-template-columns: 1fr;
+  }
+
+  .pricingScene {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .compareLane {
+    grid-template-columns: 1fr;
+  }
+
+  .compareArrow {
+    display: none;
+  }
+
+  .appManifest,
+  .expansionHub,
+  .expansionNode,
+  .appPath::before {
+    position: static;
+    transform: none;
+    width: auto;
+    height: auto;
+  }
+
+  .expansionScene {
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  .appSummaryScene {
+    grid-template-columns: 1fr;
+  }
+}

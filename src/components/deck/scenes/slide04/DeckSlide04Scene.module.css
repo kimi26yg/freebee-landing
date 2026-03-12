@@ -1,0 +1,212 @@
+.scene {
+  display: grid;
+  gap: 0.9rem;
+  height: 100%;
+  min-height: 0;
+}
+
+.premise {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.95rem 1.05rem;
+  border: 1px solid rgba(239, 217, 162, 0.82);
+  border-radius: 26px 0 26px 26px;
+  background:
+    radial-gradient(circle at top right, rgba(243, 199, 66, 0.14), transparent 12rem),
+    linear-gradient(180deg, rgba(255, 250, 238, 0.96), rgba(255, 252, 247, 0.92));
+  box-shadow: 0 16px 34px rgba(77, 54, 24, 0.07);
+}
+
+.premiseKicker {
+  color: #a97619;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.premise strong {
+  color: #2d1f12;
+  font-size: 1rem;
+  line-height: 1.35;
+  letter-spacing: -0.03em;
+}
+
+.board {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  min-height: 0;
+  padding: 1.15rem 1.1rem 1rem;
+  border: 1px solid rgba(239, 217, 162, 0.84);
+  border-radius: 30px 0 30px 30px;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(243, 199, 66, 0.1), transparent 16rem),
+    linear-gradient(180deg, rgba(255, 252, 247, 0.97), rgba(248, 244, 234, 0.95));
+  box-shadow: 0 22px 44px rgba(77, 54, 24, 0.08);
+  overflow: hidden;
+}
+
+.track {
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  right: 12%;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(196, 160, 73, 0.2), rgba(196, 160, 73, 0.08));
+  transform: translateY(-50%);
+  transition: background 240ms ease, box-shadow 240ms ease;
+}
+
+.trackLinked {
+  background: linear-gradient(90deg, rgba(243, 199, 66, 0.88), rgba(189, 147, 48, 0.92));
+  box-shadow: 0 0 0 6px rgba(243, 199, 66, 0.1);
+}
+
+.grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.95rem;
+  align-items: stretch;
+}
+
+.card {
+  display: grid;
+  gap: 0.8rem;
+  min-height: 196px;
+  padding: 1rem 0.95rem 0.9rem;
+  border: 1px solid rgba(239, 217, 162, 0.78);
+  border-radius: 26px 0 26px 26px;
+  background: rgba(255, 252, 247, 0.92);
+  box-shadow: 0 16px 30px rgba(77, 54, 24, 0.06);
+  opacity: 0.58;
+  transform: translateY(8px);
+  transition:
+    opacity 260ms ease,
+    transform 320ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background 220ms ease;
+}
+
+.cardVisible {
+  opacity: 0.88;
+  transform: translateY(0);
+}
+
+.cardLinked {
+  opacity: 1;
+  transform: translateY(0);
+  border-color: rgba(204, 159, 51, 0.72);
+  background:
+    radial-gradient(circle at top right, rgba(243, 199, 66, 0.14), transparent 10rem),
+    linear-gradient(180deg, rgba(255, 252, 247, 0.98), rgba(255, 246, 226, 0.94));
+  box-shadow: 0 22px 38px rgba(104, 71, 20, 0.12);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.step,
+.cue {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.95rem;
+  padding: 0.34rem 0.68rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.step {
+  background: rgba(33, 22, 16, 0.94);
+  color: #fff8ef;
+  text-transform: uppercase;
+}
+
+.cue {
+  background: rgba(255, 240, 194, 0.6);
+  color: #8c6c1b;
+}
+
+.card h3,
+.card p,
+.summaryBlock span,
+.summaryBlock strong {
+  margin: 0;
+}
+
+.card h3 {
+  color: #2d1f12;
+  font-size: 1.18rem;
+  line-height: 1.14;
+  letter-spacing: -0.04em;
+}
+
+.card p {
+  color: rgba(53, 39, 21, 0.72);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.nodeRow {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: auto;
+}
+
+.node {
+  width: 0.88rem;
+  height: 0.88rem;
+  border-radius: 999px;
+  background: #f3c742;
+  box-shadow: 0 0 0 6px rgba(243, 199, 66, 0.12);
+}
+
+.miniLink {
+  flex: 1;
+  min-height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(243, 199, 66, 0.88), rgba(243, 199, 66, 0.24));
+}
+
+.summary {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.summaryBlock {
+  display: grid;
+  gap: 0.22rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 20px 0 20px 20px;
+  background: rgba(52, 36, 18, 0.96);
+  box-shadow: 0 14px 28px rgba(52, 36, 18, 0.14);
+}
+
+.summaryBlock span {
+  color: rgba(255, 225, 170, 0.82);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.summaryBlock strong {
+  color: #fff8ef;
+  font-size: 0.92rem;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}

@@ -1,0 +1,327 @@
+.scene {
+  position: relative;
+  display: grid;
+  gap: 0.85rem;
+  height: 100%;
+  min-height: 0;
+}
+
+.heroBand {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) auto;
+  gap: 1rem;
+  align-items: end;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid rgba(140, 106, 55, 0.18);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 251, 242, 0.96), rgba(248, 242, 229, 0.88)),
+    radial-gradient(circle at top right, rgba(230, 181, 63, 0.18), transparent 10rem);
+  box-shadow: 0 20px 40px rgba(56, 40, 16, 0.08);
+}
+
+.heroCopy {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #a97619;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroCopy h3 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  line-height: 1.14;
+  letter-spacing: -0.04em;
+  color: #2e2112;
+}
+
+.heroCopy p {
+  margin: 0;
+  color: rgba(63, 44, 20, 0.72);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.heroSignal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 168px;
+  min-height: 88px;
+  padding: 0.95rem 1rem;
+  border-radius: 24px 10px 24px 24px;
+  background: linear-gradient(180deg, #332311, #4d3416);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.heroSignal strong {
+  color: #fff5dc;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 0.75rem;
+  padding: 0.35rem 0 0 1rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0.7rem;
+  bottom: 0.7rem;
+  left: 0.42rem;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(208, 160, 54, 0.72), rgba(208, 160, 54, 0.16));
+}
+
+.row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 124px minmax(0, 1fr) 182px;
+  gap: 0.9rem;
+  align-items: stretch;
+}
+
+.timeCard {
+  position: relative;
+  display: grid;
+  align-content: center;
+  gap: 0.25rem;
+  min-height: 120px;
+  padding: 0.9rem 0.95rem;
+  border-radius: 22px;
+  background: rgba(255, 248, 232, 0.78);
+  border: 1px solid rgba(140, 106, 55, 0.15);
+}
+
+.timeCard::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -0.95rem;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #d7aa44;
+  border-radius: 999px;
+  background: #fff9ec;
+  transform: translateY(-50%);
+}
+
+.timeLabel {
+  color: rgba(92, 61, 21, 0.68);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.timeValue {
+  color: #2f2112;
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.stageCard {
+  position: relative;
+  display: grid;
+  gap: 0.75rem;
+  min-height: 120px;
+  padding: 0.92rem 1rem;
+  border-radius: 28px;
+  border: 1px solid rgba(122, 93, 52, 0.16);
+  background:
+    linear-gradient(180deg, rgba(255, 252, 247, 0.98), rgba(250, 245, 235, 0.94)),
+    radial-gradient(circle at top right, rgba(232, 192, 93, 0.14), transparent 10rem);
+  box-shadow: 0 18px 38px rgba(58, 39, 12, 0.08);
+  opacity: 0.42;
+  transform: scale(0.985);
+  transition:
+    opacity 260ms ease,
+    transform 320ms ease,
+    box-shadow 240ms ease,
+    border-color 240ms ease,
+    background 240ms ease;
+}
+
+.isVisible {
+  transform: scale(1);
+}
+
+.isAccent {
+  opacity: 1;
+  border-color: rgba(199, 149, 41, 0.42);
+  box-shadow: 0 24px 52px rgba(104, 71, 20, 0.14);
+  background:
+    linear-gradient(180deg, rgba(255, 252, 247, 1), rgba(251, 244, 229, 0.98)),
+    radial-gradient(circle at top right, rgba(232, 192, 93, 0.22), transparent 10rem);
+}
+
+.stageTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.stagePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 30px;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 241, 202, 0.88);
+  color: #8f6214;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.stagePill i {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.stageCard h3 {
+  margin: 0;
+  color: #2e2112;
+  font-size: 1.08rem;
+  line-height: 1.26;
+  letter-spacing: -0.03em;
+}
+
+.stageCard p {
+  margin: 0;
+  color: rgba(64, 45, 21, 0.76);
+  font-size: 0.88rem;
+  line-height: 1.48;
+}
+
+.channelRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.channelChip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba(144, 111, 58, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: rgba(64, 45, 21, 0.78);
+  font-size: 0.77rem;
+  font-weight: 700;
+}
+
+.impactCard {
+  display: grid;
+  align-content: space-between;
+  gap: 0.7rem;
+  min-height: 120px;
+  padding: 0.92rem 0.9rem;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(61, 40, 17, 0.96), rgba(84, 56, 21, 0.96));
+  color: #fff7e8;
+  box-shadow: 0 18px 38px rgba(56, 38, 16, 0.12);
+  opacity: 0.32;
+  transform: scale(0.985);
+  transition:
+    opacity 260ms ease,
+    transform 320ms ease,
+    box-shadow 240ms ease;
+}
+
+.isAccentCard {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 24px 52px rgba(56, 38, 16, 0.16);
+}
+
+.impactCard strong {
+  font-size: 1.08rem;
+  line-height: 1.24;
+  letter-spacing: -0.03em;
+}
+
+.impactCard p {
+  margin: 0;
+  color: rgba(255, 244, 220, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.impactTag {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 28px;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255, 227, 154, 0.12);
+  color: #f0ca7a;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footerBand {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+}
+
+.sourceCard {
+  min-height: 84px;
+  padding: 0.88rem 0.95rem;
+  border-radius: 24px;
+  border: 1px solid rgba(140, 106, 55, 0.14);
+  background: rgba(255, 250, 240, 0.78);
+}
+
+.sourceCard {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.sourceCard strong {
+  color: #2e2112;
+  font-size: 0.93rem;
+  line-height: 1.35;
+}
+
+.sourceCard p {
+  margin: 0;
+  color: rgba(64, 45, 21, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+@media (max-width: 1200px) {
+  .row {
+    grid-template-columns: 110px minmax(0, 1fr);
+  }
+
+  .impactCard {
+    grid-column: 2;
+    min-height: 88px;
+  }
+}
