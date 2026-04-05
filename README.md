@@ -2,6 +2,8 @@
 
 Free-B 서비스를 소개하는 랜딩 페이지입니다. 운영자와 강사가 겪는 수업 운영의 문제를 정의하고, 배정·계약·체크인을 통합한 Free-B의 솔루션을 소개합니다.
 
+**배포 URL:** https://landing-omega-eight-75.vercel.app/
+
 관련 저장소: [강사 앱](https://github.com/Douce1/AppWebProject) · [어드민 웹](https://github.com/hxxlxn-Kxxx/team4-next) · [백엔드 API](https://github.com/kimi26yg/free-b)
 
 ---
@@ -52,11 +54,3 @@ npm run build
 npm run start
 ```
 
----
-
-## 배포 (Vercel)
-
-1. 이 저장소를 GitHub에 push
-2. [Vercel](https://vercel.com)에서 저장소 import
-3. Framework: **Next.js** 자동 감지 — 별도 설정 불필요
-4. Deploy
