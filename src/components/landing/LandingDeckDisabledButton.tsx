@@ -1,3 +1,5 @@
+import { PRESENTATION_URL } from '@/lib/presentation';
+
 type LandingDeckDisabledButtonProps = {
   compact?: boolean;
   label?: string;
@@ -5,19 +7,21 @@ type LandingDeckDisabledButtonProps = {
 
 export function LandingDeckDisabledButton({
   compact = false,
-  label = "발표 페이지 준비 중",
+  label = '발표자료 보기',
 }: LandingDeckDisabledButtonProps) {
   const className = compact
-    ? "landing-compact-link landing-compact-link-disabled"
-    : "button button-primary button-disabled";
+    ? 'landing-compact-link'
+    : 'button button-primary';
 
   return (
-    <span
+    <a
       className={className}
-      aria-disabled="true"
-      title="발표 페이지는 별도 프로젝트로 분리해 두었습니다."
+      href={PRESENTATION_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      title="presentation 앱의 발표 페이지를 새 탭에서 엽니다."
     >
       {label}
-    </span>
+    </a>
   );
 }

@@ -1,3 +1,5 @@
+import { PRESENTATION_URL } from "@/lib/presentation";
+
 import type {
   DeckCanvasSlide,
   DeckPresentationContent,
@@ -191,7 +193,10 @@ export const landingContent = {
       {
         title: "More",
         links: [
-          { label: "발표 페이지 준비 중", href: "#", disabled: true },
+          {
+            label: "발표자료 보기",
+            href: PRESENTATION_URL,
+          },
           { label: "맨 위로", href: "#top" },
         ],
       },

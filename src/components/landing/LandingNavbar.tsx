@@ -45,7 +45,7 @@ export function LandingNavbar() {
         ))}
       </nav>
       <div className="landing-nav-actions">
-        <LandingDeckDisabledButton compact label="발표 페이지 준비 중" />
+        <LandingDeckDisabledButton compact label="발표자료 보기" />
       </div>
     </>
   );
